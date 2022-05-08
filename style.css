@@ -1,15 +1,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  height:100vh;
-  background-color: #000000;
-}
-
-.school-scene{
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 canvas {
