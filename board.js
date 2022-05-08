@@ -1,5 +1,4 @@
 function displayMessageBoardInDarkMode(){
-  
   cursor(CROSS);
   // School table
   const message = 'Survive this night';
@@ -18,9 +17,7 @@ function displayMessageBoardInDarkMode(){
 //   text(carShot, 130, 250, 400, 300);
 }
 
-
 function displayMessageBoard() {
-  
   const welcome = 'Welcome to class !';
   textFont(fontTable);
   textSize(32);
@@ -35,7 +32,6 @@ function displayMessageBoard() {
   // const moveCar = '- Move car with left, right and space';
   // const xylo = '- use wooden stick on xylophone ';
   
-  
   stroke(255);
   strokeWeight(5);
   drawnLines.forEach(drawnLine => {
@@ -46,10 +42,9 @@ function displayMessageBoard() {
       drawnLine.pmouseY);
   });
 
+  // Draw the lines drawn by the user 
   if(mouseX > 80 && mouseX < 530 && mouseY > 80 && mouseY < 400){
     cursor('data/images/craie.png');
-    // Draw the lines drawn by the user
-    
   }else{
     cursor(ARROW);
   }
