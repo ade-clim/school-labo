@@ -369,7 +369,14 @@ function draw() {
     stopSound(soundClock);
     timeToClock();
   }
-   
+  
+  // Change Board parametre day/night  
+  if(darkMode) {
+    displayMessageBoardInDarkMode();
+  }else {
+    displayMessageBoard();
+  }
+  
   // display object with collision
   groundBottom.draw();
   groundTop.draw();
@@ -390,19 +397,8 @@ function draw() {
     moveUpRainbow();
   }
   
-  
   if(score == numKillGhost) {
     changeThemeToDay();
-  }
-  
-  // Change Board parametre day/night  
-  if(darkMode) {
-    displayMessageBoardInDarkMode();
-    fill(0,40,153,127);
-    rect(0,0,1200,800);
-    displayBulletAndEnnemies();
-  }else {
-    displayMessageBoard();
   }
   
   // Control car
@@ -413,11 +409,13 @@ function draw() {
   if (keyIsDown(LEFT_ARROW)) {
     car.left();
   }
-  
+   
   if(darkMode) {
+    fill(0,40,153,127);
+    rect(0,0,1200,800); // color night full screen
+    displayBulletAndEnnemies();
     car.showDarkMode();
   }else {
     car.show();
   }
-  
 }
