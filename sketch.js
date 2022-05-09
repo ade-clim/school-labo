@@ -410,6 +410,4 @@ function draw() {
     car.show();
   }
   
-  mouse.draw();
-  
 }
