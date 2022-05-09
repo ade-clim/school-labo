@@ -162,10 +162,7 @@ function setup() {
     h: 63,
     image: xylophoneImg},{
       isStatic: true,
-      label:"xylophone",
-      density: 1,
-      restitution: 0,
-      friction: 1
+      label:"xylophone"
   });
   
   xylophoneInstru = new SpriteBlock(world, { 
@@ -187,10 +184,7 @@ function setup() {
     h: 205, 
     image: tableImg},{
       isStatic:true,
-      label:"table",
-      density: 1,
-      restitution: 0,
-      friction: 1
+      label:"table"
   });
   
   stool = new SpriteBlock(world, { 
@@ -200,10 +194,7 @@ function setup() {
     h: 120, 
     image: stoolImg},{
       isStatic:true,
-      label:"stool",
-      density: 1,
-      restitution: 0,
-      friction: 1
+      label:"stool"
   });
   
   // Wall Collision
@@ -418,4 +409,7 @@ function draw() {
   }else {
     car.show();
   }
+  
+  mouse.draw();
+  
 }
